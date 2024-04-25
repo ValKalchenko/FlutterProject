@@ -7,6 +7,8 @@ void main() {
   runApp(MyApp()); // Running the main application
 }
 
+// flutter uses Widgets to describe the structure and layout of the app
+
 class MyApp extends StatelessWidget {
   // This stateless widget is the root of your application.
   @override
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// allows for a creation of a form 
 class Form extends StatefulWidget {
   const Form({Key? key}) : super(key: key);
 
@@ -35,10 +38,10 @@ class _FormState extends State<Form> {
   TextEditingController _phone = TextEditingController(); // controller for phone input
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  Scaffold( // provides basic app structure
       // returning a scaffold widget
       body: Center(
-        child: Column(
+        child: Column( // widget used to arrange informaiton in vertical format
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
@@ -58,7 +61,7 @@ class _FormState extends State<Form> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-                controller: _name,
+                controller: _name,// manages state of textfield allowing user interaction
                 decoration: InputDecoration( // styling the textfield
                   border: OutlineInputBorder(),
                   labelText: 'Enter your Name' // text display
